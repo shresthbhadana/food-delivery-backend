@@ -3,6 +3,8 @@ const orderRepo = require('./orderRepo');
 const userRepo = require("./userProfile");
 const restroRepo = require("./restroRepo");
 const productRepo = require("./productaRepo");
+const driverRepo = require("./driverRepo");
+const promoCodeRepo = require("./promocodeRepo");
 
 module.exports = {
   preOrderRepo,
@@ -10,4 +12,6 @@ module.exports = {
   userRepo,
   restroRepo,
   productRepo,
+  driverRepo,
+  promoCodeRepo
 };

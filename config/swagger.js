@@ -1,8 +1,8 @@
 const swaggerJsdoc = require("swagger-jsdoc");
 const path = require("path");
 
-// Windows par path.join backslashes deta hai jo glob tod deta hai
-// isliye __dirname ko forward slashes mein convert karo
+
+
 const routesDir = path.join(__dirname, "../routes").replace(/\\/g, "/");
 
 const options = {

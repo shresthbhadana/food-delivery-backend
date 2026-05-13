@@ -14,7 +14,8 @@ app.use("/users", routes);
 app.use("/", require("./routes/orderRoutes"));
 app.use("/", require("./routes/userProfileRoutes"));
 app.use("/", require("./routes/dispatcherRoutes"));
-app.use("/", require("./routes/restroRoute")); // restro: /admin/restaurants/... & /users/restaurants/...
-app.use("/", require("./routes/productRoutes")); // products: /admin/products/... & /users/products/...
-
+app.use("/", require("./routes/restroRoute")); 
+app.use("/", require("./routes/productRoutes")); 
+app.use("/", require("./routes/driverRoutes")); 
+app.use("/", require("./routes/promoCodeRoutes"));
 module.exports = app;

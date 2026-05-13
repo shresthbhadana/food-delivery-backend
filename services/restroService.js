@@ -29,7 +29,7 @@ const getRestroById = async (id) => {
 };
 
 const updateRestro = async (id, body) => {
-  // Prevent ID from being changed
+ 
   const { id: _ignore, ...safeBody } = body;
   return await restroRepo.updateRestro(id, safeBody);
 };
@@ -45,7 +45,7 @@ const toggleRestroStatus = async (id, isOpen) => {
   return await restroRepo.toggleRestroStatus(id, isOpen);
 };
 
-// Customer-facing: only open restaurants
+
 const getAllOpenRestro = async () => {
   return await restroRepo.getAllOpenRestro();
 };

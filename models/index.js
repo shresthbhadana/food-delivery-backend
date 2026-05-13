@@ -34,5 +34,37 @@ db.Dispatcher = require("./dispatcherModel");
 db.restro = require("./resModel")(sequelize, DataTypes); 
 db.Vendor = db.vendorOrder; 
 
+db.Driver = require("./driverModel")(
+  sequelize,
+  DataTypes
+);
+db.PromoCode = require(
+  "./promoCodeModel"
+)(
+  sequelize,
+  DataTypes
+);
+
+db.PromoCodeUsage = require(
+  "./promoCodeUsageModel"
+)(
+  sequelize,
+  DataTypes
+);
+
+
+db.PromoCode.hasMany(
+  db.PromoCodeUsage,
+  {
+    foreignKey: "promoCodeId",
+  }
+);
+
+db.PromoCodeUsage.belongsTo(
+  db.PromoCode,
+  {
+    foreignKey: "promoCodeId",
+  }
+);
 
 module.exports = db;
