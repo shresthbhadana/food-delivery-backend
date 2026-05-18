@@ -7,17 +7,17 @@ const trackOrder = async (productId) => {
 };
 
 const rebuildPopularMeals = async () => {
-  // 1. Get all trackers
+ 
   const trackers = await popularMealRepo.getAllOrderTrackers();
   
   if (!trackers || trackers.length === 0) {
     return { count: 0, message: "No tracked orders found." };
   }
 
-  // 2. Clear current popular meals
+
   await popularMealRepo.clearPopularMeals();
 
-  // 3. For each tracker, get product data
+ 
   const popularMealsData = [];
   
   for (const tracker of trackers) {
@@ -26,12 +26,11 @@ const rebuildPopularMeals = async () => {
       popularMealsData.push({
         productId: product.id,
         orderCount: tracker.orderCount,
-        productData: product.toJSON(), // Denormalized snapshot
+        productData: product.toJSON(),
       });
     }
   }
 
-  // 4. Bulk insert
   if (popularMealsData.length > 0) {
     await popularMealRepo.bulkCreatePopularMeals(popularMealsData);
   }

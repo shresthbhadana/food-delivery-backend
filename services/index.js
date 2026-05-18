@@ -11,6 +11,7 @@ const deliveryChargeService = require("./deliveryChargeService");
 const scheduleMessageService = require("./scheduleMessageService");
 const appVersionService = require("./appVersionService");
 const popularMealService = require("./popularMealService");
+const paymentService = require("./paymentService");
 
 module.exports = {
     preOrderService,
@@ -26,4 +27,5 @@ module.exports = {
     scheduleMessageService,
     appVersionService,
     popularMealService,
+    paymentService,
 };

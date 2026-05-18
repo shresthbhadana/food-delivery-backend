@@ -11,6 +11,7 @@ const deliveryChargeController = require("./deliveryChargeController");
 const scheduleMessageController = require("./scheduleMessageController");
 const appVersionController = require("./appVersionController");
 const popularMealController = require("./popularMealController");
+const paymentController = require("./paymentController");
 
 module.exports = {
   orderController,
@@ -26,5 +27,6 @@ module.exports = {
   scheduleMessageController,
   appVersionController,
   popularMealController,
+  paymentController,
 };
 

@@ -69,7 +69,7 @@ router.delete("/admin/deleteUserAccount", verifyAdmin, userProfileController.del
  *       201:
  *         description: Success
  */
-router.post("/addSubAdmin", verifyAdmin, userProfileController.addSubAdmin);
+router.post("admin/addSubAdmin", verifyAdmin, userProfileController.addSubAdmin);
 
 /**
  * @swagger
@@ -87,7 +87,7 @@ router.post("/addSubAdmin", verifyAdmin, userProfileController.addSubAdmin);
  *       200:
  *         description: Success
  */
-router.get("/getSubAdminById/:id", verifyAdmin, userProfileController.getSubAdminById);
+router.get("admin/getSubAdminById/:id", verifyAdmin, userProfileController.getSubAdminById);
 
 /**
  * @swagger
@@ -105,7 +105,7 @@ router.get("/getSubAdminById/:id", verifyAdmin, userProfileController.getSubAdmi
  *       200:
  *         description: Success
  */
-router.delete("/deleteSubAdminById/:id", verifyAdmin, userProfileController.deleteSubAdminById);
+router.delete("admin/deleteSubAdminById/:id", verifyAdmin, userProfileController.deleteSubAdminById);
 
 /**
  * @swagger
@@ -123,7 +123,7 @@ router.delete("/deleteSubAdminById/:id", verifyAdmin, userProfileController.dele
  *       200:
  *         description: Success
  */
-router.put("/updateUserAndPermissions", verifyAdmin, userProfileController.updateUserAndPermissions);
+router.put("admin/updateUserAndPermissions", verifyAdmin, userProfileController.updateUserAndPermissions);
 
 /**
  * @swagger
@@ -140,7 +140,7 @@ router.put("/updateUserAndPermissions", verifyAdmin, userProfileController.updat
  *       200:
  *         description: Success
  */
-router.get("/users/getAll", verifyAdmin, userProfileController.adminGetAllUsers);
+router.get("admin/users/getAll", verifyAdmin, userProfileController.adminGetAllUsers);
 
 /**
  * @swagger
@@ -158,7 +158,7 @@ router.get("/users/getAll", verifyAdmin, userProfileController.adminGetAllUsers)
  *       200:
  *         description: Success
  */
-router.get("/users/getById/:id", verifyAdmin, userProfileController.adminGetUserById);
+router.get("admin/users/getById/:id", verifyAdmin, userProfileController.adminGetUserById);
 
 /**
  * @swagger
@@ -176,6 +176,6 @@ router.get("/users/getById/:id", verifyAdmin, userProfileController.adminGetUser
  *       200:
  *         description: Success
  */
-router.put("/users/update", verifyAdmin, userProfileController.adminUpdateUser);
+router.put("admin/users/update", verifyAdmin, userProfileController.adminUpdateUser);
 
 module.exports = router;

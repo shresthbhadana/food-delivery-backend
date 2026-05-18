@@ -10,6 +10,7 @@ const deliveryChargeRepo = require("./deliveryChargeRepo");
 const scheduleRepo = require("./scheduleRepo");
 const appVersionRepo = require("./appVersionRepo");
 const popularMealRepo = require("./popularMealRepo");
+const paymentRepo = require("./paymentRepo");
 
 module.exports = {
   preOrderRepo,
@@ -24,4 +25,5 @@ module.exports = {
   scheduleRepo,
   appVersionRepo,
   popularMealRepo,
+  paymentRepo,
 };

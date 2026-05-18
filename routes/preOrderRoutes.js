@@ -66,7 +66,7 @@ router.post(
  *         description: Internal server error
  */
 router.put(
-  "/updatePreOrder/:id",
+  "/users/orders/updatePreOrder/:id",
   preOrderController.updatePreOrder
 );
 
@@ -90,7 +90,7 @@ router.put(
  *         description: Internal server error
  */
 router.get(
-  "/getPreOrderById/:id",
+  "/users/orders/getPreOrderById/:id",
   preOrderController.getPreOrderById
 );
 
@@ -107,7 +107,7 @@ router.get(
  *         description: Internal server error
  */
 router.get(
-  "/getAllPreOrders",
+  "/users/ordersget/getAllPreOrders",
   preOrderController.getAllPreOrders
 );
 
@@ -131,7 +131,7 @@ router.get(
  *         description: Internal server error
  */
 router.delete(
-  "/deletePreOrderById/:id",
+  "/users/orders/deletePreOrderById/:id",
   preOrderController.deletePreOrderById
 );
 
@@ -165,7 +165,7 @@ router.delete(
  *         description: Internal server error
  */
 router.put(
-  "/acceptOrRejectPreOrder/:id",
+  "/users/orders/acceptOrRejectPreOrder/:id",
   preOrderController.acceptOrRejectPreOrder
 );
 
@@ -182,7 +182,7 @@ router.put(
  *         description: Internal server error
  */
 router.get(
-  "/getAllPreOrdersByVendor",
+  "users/orders/getAllPreOrdersByVendor",
   preOrderController.getAllPreOrdersByVendor
 );
 

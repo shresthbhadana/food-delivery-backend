@@ -101,5 +101,24 @@ db.AppVersion =
 
 db.OrderTracker = require("./orderTrackerModel")(sequelize, DataTypes);
 db.PopularMeal = require("./popularMealModel")(sequelize, DataTypes);
+db.Payment = require(
+  "./paymentModel"
+)(
+  sequelize,
+  DataTypes
+);
+db.order.hasMany(
+  db.Payment,
+  {
+    foreignKey: "orderId",
+  }
+);
+
+db.Payment.belongsTo(
+  db.order,
+  {
+    foreignKey: "orderId",
+  }
+);
 
 module.exports = db;
