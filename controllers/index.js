@@ -8,6 +8,7 @@ const promoCodeController = require("./promoCodeController");
 const notificationController = require("./notificatonController");
 const globalController = require("./globalController");
 const deliveryChargeController = require("./deliveryChargeController");
+const scheduleMessageController = require("./scheduleMessageController");
 
 module.exports = {
   orderController,
@@ -20,5 +21,6 @@ module.exports = {
   notificationController,
   globalController,
   deliveryChargeController,
+  scheduleMessageController,
 };
 

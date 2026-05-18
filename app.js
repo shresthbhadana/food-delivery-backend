@@ -20,4 +20,5 @@ app.use("/", require("./routes/driverRoutes"));
 app.use("/", require("./routes/promoCodeRoutes"));
 app.use("/", require("./routes/globalRoutes"));
 app.use("/", require("./routes/deliveryChargeRoutes"));
+app.use("/", require("./routes/scheduleMessageRoutes"));
 module.exports = app;

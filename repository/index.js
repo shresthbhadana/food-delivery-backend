@@ -7,6 +7,7 @@ const driverRepo = require("./driverRepo");
 const promoCodeRepo = require("./promocodeRepo");
 const globalRepo = require("./globalRepo");
 const deliveryChargeRepo = require("./deliveryChargeRepo");
+const scheduleRepo = require("./scheduleRepo");
 
 module.exports = {
   preOrderRepo,
@@ -17,5 +18,6 @@ module.exports = {
   driverRepo,
   promoCodeRepo,
   globalRepo,
-  deliveryChargeRepo
+  deliveryChargeRepo,
+  scheduleRepo,
 };

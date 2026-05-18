@@ -5,8 +5,6 @@ const db = require("./models");
 const { userService, globalService } = require("./services/index");
 require("./utils/deliveryChargeCorns");
 
-
-
 const PORT = process.env.PORT || 3000;
 
 db.sequelize.sync({ force: true }).then(async () => {

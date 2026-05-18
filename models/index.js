@@ -85,5 +85,11 @@ db.DeliveryChargeSchedule =
     sequelize,
     DataTypes
   );
+db.ScheduledMessage = require(
+  "./scheduleMessageModel"
+)(
+  sequelize,
+  DataTypes
+);
 
 module.exports = db;

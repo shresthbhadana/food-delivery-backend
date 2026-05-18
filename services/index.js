@@ -8,6 +8,7 @@ const promoCodeService = require("./promoCodeService");
 const notificationService = require("./notificationService");
 const globalService  = require("./globalService");
 const deliveryChargeService = require("./deliveryChargeService");
+const scheduleMessageService = require("./scheduleMessageService");
 
 
 
@@ -22,4 +23,5 @@ module.exports = {
     notificationService,
     globalService,
     deliveryChargeService,
+    scheduleMessageService,
 };
