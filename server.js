@@ -3,7 +3,7 @@ require("dotenv").config({ path: require("path").join(__dirname, "..", ".env") }
 const app = require("./app");
 const db = require("./models");
 const { userService, globalService } = require("./services/index");
-require("./utils/deliveryChargeCorns");
+require("./utils/cornJobs");
 
 const PORT = process.env.PORT || 3000;
 

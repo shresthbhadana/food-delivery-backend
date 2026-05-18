@@ -22,7 +22,13 @@ if(
     id,
     commissionPercentage
   );
-  return update
+  try {
+    const { updateProductPricesOnCommissionChange } = require("../utils/cornJobs");
+    updateProductPricesOnCommissionChange(commissionPercentage);
+  } catch (err) {
+    console.error("Error triggering product price update:", err.message);
+  }
+  return update;
 };
 
 const updateDeliveryCharge = async (
