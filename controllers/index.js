@@ -5,6 +5,9 @@ const restroController = require("./restroController");
 const productController  = require("./productController");
 const driverController = require("./driverController");
 const promoCodeController = require("./promoCodeController");
+const notificationController = require("./notificatonController");
+const globalController = require("./globalController");
+const deliveryChargeController = require("./deliveryChargeController");
 
 module.exports = {
   orderController,
@@ -13,5 +16,9 @@ module.exports = {
   restroController,
   productController,
   driverController,
-  promoCodeController
+  promoCodeController,
+  notificationController,
+  globalController,
+  deliveryChargeController,
 };
+

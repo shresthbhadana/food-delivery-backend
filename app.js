@@ -18,4 +18,6 @@ app.use("/", require("./routes/restroRoute"));
 app.use("/", require("./routes/productRoutes")); 
 app.use("/", require("./routes/driverRoutes")); 
 app.use("/", require("./routes/promoCodeRoutes"));
+app.use("/", require("./routes/globalRoutes"));
+app.use("/", require("./routes/deliveryChargeRoutes"));
 module.exports = app;

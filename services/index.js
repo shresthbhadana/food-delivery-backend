@@ -5,6 +5,10 @@ const restroService = require("./restroService");
 const productService =  require("./productService");
 const driverService = require("./driverService");
 const promoCodeService = require("./promoCodeService");
+const notificationService = require("./notificationService");
+const globalService  = require("./globalService");
+const deliveryChargeService = require("./deliveryChargeService");
+
 
 
 module.exports = {
@@ -14,5 +18,8 @@ module.exports = {
     restroService,
     productService,
     driverService,
-    promoCodeService
+    promoCodeService,
+    notificationService,
+    globalService,
+    deliveryChargeService,
 };

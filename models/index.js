@@ -66,5 +66,24 @@ db.PromoCodeUsage.belongsTo(
     foreignKey: "promoCodeId",
   }
 );
+db.Notification = require(
+  "./notificationModel"
+)(
+  sequelize,
+  DataTypes
+);
+db.Setting = require(
+  "./globalModel"
+)(
+  sequelize,
+  DataTypes
+);
+db.DeliveryChargeSchedule =
+  require(
+    "./deliveryChargeModel"
+  )(
+    sequelize,
+    DataTypes
+  );
 
 module.exports = db;
