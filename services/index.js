@@ -9,8 +9,8 @@ const notificationService = require("./notificationService");
 const globalService  = require("./globalService");
 const deliveryChargeService = require("./deliveryChargeService");
 const scheduleMessageService = require("./scheduleMessageService");
-
-
+const appVersionService = require("./appVersionService");
+const popularMealService = require("./popularMealService");
 
 module.exports = {
     preOrderService,
@@ -24,4 +24,6 @@ module.exports = {
     globalService,
     deliveryChargeService,
     scheduleMessageService,
+    appVersionService,
+    popularMealService,
 };

@@ -91,5 +91,15 @@ db.ScheduledMessage = require(
   sequelize,
   DataTypes
 );
+db.AppVersion = 
+  require(
+    "./appVersionModel"
+  )(
+    sequelize,
+    DataTypes
+  );
+
+db.OrderTracker = require("./orderTrackerModel")(sequelize, DataTypes);
+db.PopularMeal = require("./popularMealModel")(sequelize, DataTypes);
 
 module.exports = db;

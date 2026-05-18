@@ -9,6 +9,8 @@ const notificationController = require("./notificatonController");
 const globalController = require("./globalController");
 const deliveryChargeController = require("./deliveryChargeController");
 const scheduleMessageController = require("./scheduleMessageController");
+const appVersionController = require("./appVersionController");
+const popularMealController = require("./popularMealController");
 
 module.exports = {
   orderController,
@@ -22,5 +24,7 @@ module.exports = {
   globalController,
   deliveryChargeController,
   scheduleMessageController,
+  appVersionController,
+  popularMealController,
 };
 

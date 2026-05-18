@@ -8,6 +8,8 @@ const promoCodeRepo = require("./promocodeRepo");
 const globalRepo = require("./globalRepo");
 const deliveryChargeRepo = require("./deliveryChargeRepo");
 const scheduleRepo = require("./scheduleRepo");
+const appVersionRepo = require("./appVersionRepo");
+const popularMealRepo = require("./popularMealRepo");
 
 module.exports = {
   preOrderRepo,
@@ -20,4 +22,6 @@ module.exports = {
   globalRepo,
   deliveryChargeRepo,
   scheduleRepo,
+  appVersionRepo,
+  popularMealRepo,
 };

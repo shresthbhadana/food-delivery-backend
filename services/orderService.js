@@ -94,6 +94,17 @@ const createOrder = async (data) => {
     );
   }
 
+  try {
+    const { popularMealService } = require("./index");
+    for (const item of data.items) {
+      if (item.productId) {
+        await popularMealService.trackOrder(item.productId);
+      }
+    }
+  } catch (err) {
+    console.error("Error tracking order for popular meals:", err.message);
+  }
+
   return order;
 };
 

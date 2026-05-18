@@ -8,6 +8,7 @@ const globalRoutes = require("./globalRoutes");
 const delveryChargeRoutes = require("./deliveryChargeRoutes");
 const driverRoutes = require("./driverRoutes")
 const scheduleMessageRoutes = require("./scheduleMessageRoutes");
+const appVersionRoutes = require("./appVersionRoutes");
 
 router.use("/users/orders", preOrderRoutes);
 router.use("/", orderRoutes);
@@ -19,7 +20,5 @@ router.use("/", notificationRoutes);
 router.use("/", globalRoutes);
 router.use("/",delveryChargeRoutes)
 router.use("/", scheduleMessageRoutes);
-
-
 
 module.exports = router;
