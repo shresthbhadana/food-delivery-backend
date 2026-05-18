@@ -31,7 +31,7 @@ The application strictly enforces a **4-Tier Modular Layered Architecture** to e
                             ▼
 ┌────────────────────────────────────────────────────────┐
 │          Service Layer (Business Logic & Flow)         │
-│     Transactions, Calculations, External API calls     │
+│     Transactions, Calculations, Custom Auth / UUIDs    │
 └───────────────────────────┬────────────────────────────┘
                             ▼
 ┌────────────────────────────────────────────────────────┐
@@ -45,8 +45,8 @@ The application strictly enforces a **4-Tier Modular Layered Architecture** to e
 ## ✨ Key Enterprise Features
 
 ### 👥 1. Role-Based Access Control (RBAC) & Multi-Role System
-Seamless multi-tenant user profile management catering to 5 distinct system roles:
-- **Admin**: Full platform management, commission settings, promo codes, and driver oversight.
+Seamless multi-tenant user profile management utilizing **UUIDv4** for secure identification catering to 5 distinct system roles:
+- **Admin**: Full platform management, default admin seeding, commission settings, promo codes, and driver oversight.
 - **Sub-Admin / Dispatcher**: Role-restricted access with granular permissions for order management.
 - **Vendor / Restaurant**: Product management, pre-order approvals, and live vendor-order tracking.
 - **Driver / Courier**: Geospatial location updates, online/offline toggling, and instant order assignment.
@@ -78,7 +78,7 @@ Powered by `node-cron`, executing periodic system maintenance autonomously:
 
 Built on **MySQL** utilizing **Sequelize ORM** with over **20 interconnected models**:
 - Optimized with composite database indexes on frequently queried fields (`userId` + `createdAt`, `status` + `isRead`, etc.).
-- Utilizes `UUIDV4` primary keys for secure, unpredictable resource identification.
+- Utilizes `UUIDv4` primary keys across all major tables for secure, unpredictable resource identification.
 - Employs strict Foreign Key constraints (`ON DELETE CASCADE`) to preserve relational data integrity across Orders, Payments, Products, and Reviews.
 
 ---
@@ -119,7 +119,6 @@ DB_USER=root
 DB_PASSWORD=your_password
 DB_NAME=food_delivery
 JWT_SECRET=your_super_secret_jwt_key
-FIREBASE_SERVICE_ACCOUNT_KEY=path_to_firebase_key.json
 ```
 
 ### 4. Run the Server
@@ -132,7 +131,7 @@ For production execution:
 npm start
 ```
 
-Upon successful startup, Sequelize will automatically synchronize your database schemas and generate default administrative credentials.
+Upon successful startup, Sequelize will automatically synchronize your database schemas and generate default administrative credentials (`admin` seeded via UUID).
 
 ---
 
@@ -141,7 +140,7 @@ Upon successful startup, Sequelize will automatically synchronize your database 
 - **Web Framework**: Express.js
 - **Database**: MySQL Server
 - **ORM**: Sequelize ORM v6
-- **Authentication**: Firebase Admin SDK & JWT
+- **Authentication**: Custom Authentication / JWT & UUIDv4
 - **Cron Jobs**: Node-Cron
 - **API Documentation**: Swagger UI Express
 - **Logging**: Custom Winston / Console Logger
